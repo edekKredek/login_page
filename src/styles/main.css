@@ -1,0 +1,12 @@
+/* Main stylesheet placeholder for the app; imported after reset.css */
+body {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  color: #111;
+  background: #fff;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 16px;
+}
