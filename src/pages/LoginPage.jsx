@@ -10,6 +10,8 @@ export default function LoginPage() {
   const [passwordError, setPasswordError] = useState(null);
   const navigate = useNavigate();
 
+  const isFormValid = String(email || '').trim() !== '' && String(password || '').trim() !== '';
+
   const handleSubmit = (e) => {
     e.preventDefault();
     // clear previous field errors
@@ -93,7 +95,14 @@ export default function LoginPage() {
             {error}
           </div>
         )}
-        <button type="submit" style={{ padding: '10px 16px' }}>
+        <button
+          type="submit"
+          className={isFormValid ? 'btn-primary' : 'btn-disabled'}
+          aria-disabled={!isFormValid}
+          tabIndex={0}
+          onClick={(ev) => { if (!isFormValid) ev.preventDefault(); }}
+          style={{ padding: '10px 16px' }}
+        >
           Login
         </button>
       </form>
