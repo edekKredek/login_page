@@ -99,7 +99,8 @@ export default function LoginPage() {
           type="submit"
           className={isFormValid ? 'btn-primary' : 'btn-disabled'}
           aria-disabled={!isFormValid}
-          tabIndex={0}
+          disabled={!isFormValid}
+          tabIndex={isFormValid ? 0 : -1}
           onClick={(ev) => { if (!isFormValid) ev.preventDefault(); }}
           style={{ padding: '10px 16px' }}
         >
