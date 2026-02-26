@@ -98,7 +98,7 @@ export default function LoginForm() {
         </div>
 
         {error && (
-          <div style={{ color: 'var(--color-primary)', marginBottom: 12 }} role="alert">
+          <div className="error-message" role="alert" aria-live="assertive">
             {error}
           </div>
         )}
