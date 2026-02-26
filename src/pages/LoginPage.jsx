@@ -8,7 +8,12 @@ export default function LoginPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Accept any credentials per spec and navigate client-side
+    // Accept any credentials per spec, persist a flag and navigate client-side
+    try {
+      sessionStorage.setItem('successDisplayed', 'true');
+    } catch (err) {
+      // ignore storage errors
+    }
     navigate('/success');
   };
 
