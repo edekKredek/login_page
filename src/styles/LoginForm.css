@@ -122,3 +122,9 @@
   outline: 2px solid color-mix(in srgb, var(--color-primary) 40%, black);
   outline-offset: 2px;
 }
+
+/* Focus styles for inputs and buttons */
+input:focus-visible, button:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--color-primary) 30%, black);
+  outline-offset: 2px;
+}

@@ -66,6 +66,9 @@ export default function LoginPage() {
             aria-invalid={emailError ? 'true' : 'false'}
             required
             style={{ width: '100%', padding: 8 }}
+            tabIndex={1}
+            autoFocus
+            aria-label="Email address"
           />
           {emailError && (
             <p id="login-email-error" className="field-error" aria-live="polite">
@@ -88,6 +91,8 @@ export default function LoginPage() {
             aria-invalid={passwordError ? 'true' : 'false'}
             required
             style={{ width: '100%', padding: 8 }}
+            tabIndex={2}
+            aria-label="Password"
           />
           {passwordError && (
             <p id="login-password-error" className="field-error" aria-live="polite">
@@ -105,9 +110,10 @@ export default function LoginPage() {
           className={isFormValid ? 'btn-primary' : 'btn-disabled'}
           aria-disabled={!isFormValid}
           disabled={!isFormValid}
-          tabIndex={isFormValid ? 0 : -1}
+          tabIndex={3}
           onClick={(ev) => { if (!isFormValid) ev.preventDefault(); }}
           style={{ padding: '10px 16px' }}
+          aria-label="Submit login"
         >
           Login
         </button>

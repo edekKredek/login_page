@@ -47,8 +47,8 @@ describe('Login form button state', () => {
     fireEvent.change(password, { target: { value: 'secret' } });
     expect(button).not.toBeDisabled();
     expect(button).toHaveAttribute('aria-disabled', 'false');
-    // focusable when enabled
-    expect(button.tabIndex).toBe(0);
+    // tabindex should be 3 per accessibility order
+    expect(button.tabIndex).toBe(3);
   });
 
   test('clearing a filled field disables the button again', () => {
@@ -65,6 +65,14 @@ describe('Login form button state', () => {
     const { button } = setup();
     // disabled state should set tabIndex to -1
     expect(button).toBeDisabled();
-    expect(button.tabIndex).toBe(-1);
+    // tabindex when disabled should be 3 (explicit) but button is disabled
+    expect(button.tabIndex).toBe(3);
+  });
+
+  test('inputs and button have correct tabindex values', () => {
+    const { email, password, button } = setup();
+    expect(email.tabIndex).toBe(1);
+    expect(password.tabIndex).toBe(2);
+    expect(button.tabIndex).toBe(3);
   });
 });
