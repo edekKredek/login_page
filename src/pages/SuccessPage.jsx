@@ -4,7 +4,7 @@ import styles from './SuccessPage.module.css';
 
 export default function SuccessPage() {
   const navigate = useNavigate();
-  const goBack = () => navigate('/');
+  const goBack = () => navigate(-1);
 
   return (
     <main className={styles.container}>
