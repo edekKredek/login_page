@@ -82,4 +82,19 @@ Open the printed URL (default http://localhost:5173) and navigate to `/`.
 
 Clicking the Login button redirects to `/success` without a full page reload.
 
+### Accessibility Checklist
+
+The login form implements the following accessibility features (see `src/components/LoginForm.jsx`):
+
+- Use of semantic HTML elements: `form`, `label`, `input`.
+- Proper `for` attribute linking labels to inputs (e.g., `label[for="login-email"]`).
+- Keyboard navigability: tab order, visible focus indicators, and `tabindex` usage where appropriate.
+- ARIA attributes: `aria-required`, `aria-invalid`, and `aria-describedby` for error associations.
+- Clear, programmatic error messages surfaced via elements with `role="alert"` and `aria-live`.
+- Sufficient color contrast following WCAG AA guidelines; use CSS variables to manage theme colors.
+- Responsive touch targets (minimum recommended target size `44x44` pixels for touch controls).
+- Screen reader compatibility: avoid hidden text for meaningful content; use accessible placeholders and labels.
+
+Reference: `docs/STYLE_GUIDE.md#validation-rules` and `src/components/LoginForm.jsx` for implementation details.
+
 For a detailed, canonical list of validation rules and accessibility notes, see the Validation Rules section in the project style guide: [docs/STYLE_GUIDE.md#validation-rules](docs/STYLE_GUIDE.md#validation-rules).
