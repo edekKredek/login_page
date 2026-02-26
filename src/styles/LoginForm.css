@@ -128,3 +128,9 @@ input:focus-visible, button:focus-visible {
   outline: 3px solid color-mix(in srgb, var(--color-primary) 30%, black);
   outline-offset: 2px;
 }
+
+/* Ensure visible focus for all focus states (not only focus-visible) */
+input:focus, button:focus {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}

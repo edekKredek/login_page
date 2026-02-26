@@ -65,13 +65,14 @@ export default function LoginPage() {
             aria-describedby={emailError ? 'login-email-error' : undefined}
             aria-invalid={emailError ? 'true' : 'false'}
             required
+            aria-required="true"
             style={{ width: '100%', padding: 8 }}
             tabIndex={1}
             autoFocus
             aria-label="Email address"
           />
           {emailError && (
-            <p id="login-email-error" className="field-error" aria-live="polite">
+            <p id="login-email-error" className="field-error" aria-live="polite" role="alert">
               {emailError}
             </p>
           )}
@@ -87,15 +88,17 @@ export default function LoginPage() {
             name="password"
             value={password}
             onChange={(e) => { setPassword(e.target.value); if (passwordError) setPasswordError(null); }}
+            onKeyDown={(e) => { if (e.key === 'Enter') handleSubmit(e); }}
             aria-describedby={passwordError ? 'login-password-error' : undefined}
             aria-invalid={passwordError ? 'true' : 'false'}
             required
+            aria-required="true"
             style={{ width: '100%', padding: 8 }}
             tabIndex={2}
             aria-label="Password"
           />
           {passwordError && (
-            <p id="login-password-error" className="field-error" aria-live="polite">
+            <p id="login-password-error" className="field-error" aria-live="polite" role="alert">
               {passwordError}
             </p>
           )}
