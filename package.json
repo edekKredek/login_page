@@ -1,0 +1,30 @@
+{
+  "name": "login_page",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "test": "jest --runInBand"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "6"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.22.0",
+    "@babel/preset-react": "^7.22.0",
+    "@playwright/test": "^1.58.2",
+    "@testing-library/jest-dom": "^6.0.0",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.0.0",
+    "babel-jest": "^29.0.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^29.0.0",
+    "jest-environment-jsdom": "^30.2.0",
+    "vite": "^5.0.0"
+  }
+}

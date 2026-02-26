@@ -98,3 +98,16 @@ The login form implements the following accessibility features (see `src/compone
 Reference: `docs/STYLE_GUIDE.md#validation-rules` and `src/components/LoginForm.jsx` for implementation details.
 
 For a detailed, canonical list of validation rules and accessibility notes, see the Validation Rules section in the project style guide: [docs/STYLE_GUIDE.md#validation-rules](docs/STYLE_GUIDE.md#validation-rules).
+
+<!-- COVERAGE:START -->
+## Test Coverage
+
+| Metric | Coverage |
+|---|---:|
+| Lines | 48.64% |
+| Statements | 47.82% |
+| Functions | 62.5% |
+| Branches | 47.91% |
+
+_Last updated: 2026-02-26T15:35:45.787Z_
+<!-- COVERAGE:END -->
