@@ -4,6 +4,9 @@ import '../styles/LoginForm.css';
 import { isLoginFormValid } from '../utils/validation';
 
 export default function LoginPage() {
+  // Accessibility: this component ensures every form control has an
+  // associated <label> with a matching `htmlFor`/`id` so screen readers
+  // announce the control purpose. Labels are kept visible for clarity.
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [emailError, setEmailError] = useState(null);
@@ -49,8 +52,9 @@ export default function LoginPage() {
       <form onSubmit={handleSubmit} className="login-form">
         <h2>Login</h2>
         <div style={{ marginBottom: 12 }}>
+          {/* Visible label for screen readers and sighted users */}
           <label style={{ display: 'block', marginBottom: 6 }} htmlFor="login-email">
-            Email
+            Email address
           </label>
           <input
             id="login-email"
@@ -70,6 +74,7 @@ export default function LoginPage() {
           )}
         </div>
         <div style={{ marginBottom: 12 }}>
+          {/* Visible label for screen readers and sighted users */}
           <label style={{ display: 'block', marginBottom: 6 }} htmlFor="login-password">
             Password
           </label>
