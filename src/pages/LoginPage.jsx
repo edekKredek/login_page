@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import '../styles/LoginForm.css';
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
@@ -18,8 +19,8 @@ export default function LoginPage() {
   };
 
   return (
-    <main style={{ display: 'flex', justifyContent: 'center', padding: 40 }}>
-      <form onSubmit={handleSubmit} style={{ width: 360 }}>
+    <div className="login-container">
+      <form onSubmit={handleSubmit} className="login-form">
         <h2>Login</h2>
         <div style={{ marginBottom: 12 }}>
           <label style={{ display: 'block', marginBottom: 6 }}>
@@ -51,6 +52,6 @@ export default function LoginPage() {
           Login
         </button>
       </form>
-    </main>
+    </div>
   );
 }
