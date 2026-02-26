@@ -81,3 +81,5 @@ npm run dev
 Open the printed URL (default http://localhost:5173) and navigate to `/`.
 
 Clicking the Login button redirects to `/success` without a full page reload.
+
+For a detailed, canonical list of validation rules and accessibility notes, see the Validation Rules section in the project style guide: [docs/STYLE_GUIDE.md#validation-rules](docs/STYLE_GUIDE.md#validation-rules).
