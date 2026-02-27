@@ -1,15 +1,16 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import LoginPage from './pages/LoginPage.jsx';
-import SuccessPage from './pages/SuccessPage.jsx';
-import NotFound from './components/NotFound.jsx';
+import './App.css';
 
 export default function App() {
   return (
-    <Routes>
-      <Route path="/" element={<LoginPage />} />
-      <Route path="/success" element={<SuccessPage />} />
-      <Route path="*" element={<NotFound />} />
-    </Routes>
+    <div className="App">
+      <h1>Login</h1>
+      <form>
+        <label htmlFor="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        <label htmlFor="password">Password:</label>
+        <input type="password" id="password" name="password" required />
+        <button type="submit">Login</button>
+      </form>
+    </div>
   );
 }

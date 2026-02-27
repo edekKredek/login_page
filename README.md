@@ -111,3 +111,9 @@ For a detailed, canonical list of validation rules and accessibility notes, see 
 
 _Last updated: 2026-02-26T15:35:45.787Z_
 <!-- COVERAGE:END -->
+
+## Environment Variables
+
+- `VITE_API_BASE_URL`: Base URL for API requests used by the client during development. Default: `http://localhost:4000`.
+
+Store additional environment overrides in a local `.env` file at the project root. Vite exposes variables prefixed with `VITE_` to the client.
