@@ -1,3 +1,40 @@
+
+# restaurant-management-platform
+
+A single-page client-side application for a restaurant management platform, built with Vite and React. The initial feature is a login form.
+
+## Setup
+
+- Install dependencies:
+
+	```bash
+	npm install
+	```
+
+- Start dev server (HMR enabled):
+
+	```bash
+	npm run dev
+	```
+
+- Build for production:
+
+	```bash
+	npm run build
+	```
+
+## Git
+
+This repository uses a `.gitignore` to exclude commonly ignored files. Key entries:
+
+- `node_modules/` — local dependencies
+- `dist/` — production build output
+- `*.log` — log files
+- `*.env` — local environment overrides (do not commit secrets)
+- `.DS_Store` — macOS file
+
+If you want to share example env variables, commit a `.env.example` file (note: `.env` itself is ignored).
+
 # login_page
 
 Minimal React app with client-side routing using react-router-dom v6.
