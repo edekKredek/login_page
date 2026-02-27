@@ -1,0 +1,22 @@
+{
+  "extends": ["airbnb", "airbnb/hooks"],
+  "env": { "browser": true, "es2021": true, "node": true },
+  "parserOptions": { "ecmaVersion": 12, "sourceType": "module", "ecmaFeatures": { "jsx": true } },
+  "plugins": ["react"],
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "linebreak-style": "off",
+    "import/extensions": "off",
+    "react/jsx-filename-extension": "off",
+    "jsx-a11y/label-has-associated-control": "off",
+    "jsx-a11y/no-autofocus": "off",
+    "jsx-a11y/tabindex-no-positive": "off",
+    "import/no-extraneous-dependencies": "off"
+  },
+  "overrides": [
+    {
+      "files": ["**/__tests__/**", "**/*.test.*", "**/*.spec.*"],
+      "env": { "jest": true }
+    }
+  ]
+}
