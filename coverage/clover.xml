@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1772120061390" clover="3.2.0">
+  <project timestamp="1772120061390" name="All files">
+    <metrics statements="37" coveredstatements="18" conditionals="48" coveredconditionals="23" methods="8" coveredmethods="5" elements="93" coveredelements="46" complexity="0" loc="37" ncloc="37" packages="3" files="3" classes="3"/>
+    <package name="components">
+      <metrics statements="30" coveredstatements="11" conditionals="40" coveredconditionals="17" methods="6" coveredmethods="3"/>
+      <file name="LoginForm.jsx" path="F:\test\login_page\src\components\LoginForm.jsx">
+        <metrics statements="30" coveredstatements="11" conditionals="40" coveredconditionals="17" methods="6" coveredmethods="3"/>
+        <line num="7" count="20" type="stmt"/>
+        <line num="8" count="19" type="stmt"/>
+        <line num="9" count="19" type="stmt"/>
+        <line num="10" count="19" type="stmt"/>
+        <line num="11" count="19" type="stmt"/>
+        <line num="12" count="19" type="stmt"/>
+        <line num="14" count="15" type="cond" truecount="6" falsecount="0"/>
+        <line num="16" count="15" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="22" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="23" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="30" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="34" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="44" count="15" type="stmt"/>
+        <line num="57" count="3" type="cond" truecount="1" falsecount="1"/>
+        <line num="83" count="4" type="cond" truecount="1" falsecount="1"/>
+        <line num="84" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="112" count="0" type="cond" truecount="0" falsecount="2"/>
+      </file>
+    </package>
+    <package name="components.LoginForm">
+      <metrics statements="6" coveredstatements="6" conditionals="8" coveredconditionals="6" methods="1" coveredmethods="1"/>
+      <file name="validation.js" path="F:\test\login_page\src\components\LoginForm\validation.js">
+        <metrics statements="6" coveredstatements="6" conditionals="8" coveredconditionals="6" methods="1" coveredmethods="1"/>
+        <line num="8" count="4" type="stmt"/>
+        <line num="9" count="4" type="cond" truecount="1" falsecount="1"/>
+        <line num="10" count="4" type="cond" truecount="1" falsecount="1"/>
+        <line num="11" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="12" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="13" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="pages">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="LoginPage.jsx" path="F:\test\login_page\src\pages\LoginPage.jsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="8" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

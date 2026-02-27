@@ -1,0 +1,49 @@
+name: Publish Style Guide to Wiki
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'docs/STYLE_GUIDE.md'
+
+jobs:
+  publish-wiki:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Publish STYLE_GUIDE.md to GitHub Wiki
+        env:
+          WIKI_TOKEN: ${{ secrets.WIKI_PUBLISH_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          if [ -z "${WIKI_TOKEN:-}" ]; then
+            echo "WIKI_PUBLISH_TOKEN is not set. Skipping wiki publish." >&2
+            exit 0
+          fi
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          REPO_WIKI_DIR=repo.wiki
+          rm -rf "$REPO_WIKI_DIR"
+
+          # Clone the wiki repository using the provided token
+          git clone "https://x-access-token:${WIKI_TOKEN}@github.com/${GITHUB_REPOSITORY}.wiki.git" "$REPO_WIKI_DIR"
+
+          # Copy the style guide into the wiki
+          cp docs/STYLE_GUIDE.md "$REPO_WIKI_DIR/STYLE_GUIDE.md"
+
+          pushd "$REPO_WIKI_DIR"
+          git add STYLE_GUIDE.md
+          if git diff --cached --quiet; then
+            echo "No changes to wiki. Exiting."
+            exit 0
+          fi
+          git commit -m "chore(docs): update STYLE_GUIDE from repository"
+          git push origin HEAD:main
+          popd
